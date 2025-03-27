@@ -3,7 +3,9 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 
-model=joblib.load('solarproject.pkl')
+import os
+model_path = os.path.join(os.getcwd(), 'solarproject.pkl')
+model = joblib.load(model_path)
 
 st.title('Solar Power Generation Prediction')
 st.info('This is a Gradiant Boosting Machine Learning App')
